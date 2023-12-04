@@ -1,0 +1,33 @@
+<div>
+    <h2>Carrito</h2>
+    <div class="productos">
+        por hacer...
+    </div>
+
+    <form action="" class="datos-usuario">
+        <div class="nombre">
+            <label for="nombreCompleto">Nombre</label>
+            <input type="text" id="nombreCompleto" [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="direccion">
+            <label for="direccion">Direccion</label>
+            <input type="text" id="direccion" [(ngModel)]="direccion" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="button" (click)="realizarPedido()">Aceptar</button>
+    </form>
+    <button type="button" (click)="mostrarDatos()">Mostrar datos libro de prueba</button>
+</div>
+<div class="info" style="color: green;">
+    {{info}}
+</div>
+<div style="color: blueviolet;">
+{{videojuegoPrueba}} <br>
+{{videojuegoPrueba.precio}}€
+</div>
+<div style="color: blue;">
+    Mostrar Array en TypeScript: <br>
+    <div *ngFor="let v of listadoVideojuegos">
+        {{v.nombre}} <br>
+        {{v.precio}} <br>
+    </div>
+</div>
